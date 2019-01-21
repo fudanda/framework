@@ -46,7 +46,10 @@ class User extends Controller
     public function index()
     {
         $this->title = '系统用户管理';
-        return $this->_query($this->table)->where(['is_deleted' => '0'])->like('username,phone,mail')->dateBetween('login_at')->equal('status')->page();
+        $data=$this->_query($this->table)->where(['is_deleted' => '0'])->like('username,phone,mail')->dateBetween('login_at')->equal('status')->page();
+        var_dump($data);
+
+        return $data;
     }
 
     /**
@@ -119,6 +122,7 @@ class User extends Controller
             $this->assign('authorizes', Db::name('SystemAuth')->where(['status' => '1'])->select());
         }
     }
+
 
     /**
      * 删除用户

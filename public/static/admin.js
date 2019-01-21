@@ -185,6 +185,7 @@ $(function () {
         };
         // 加载HTML到弹出层
         this.modal = function (url, data, title, callback, loading, tips) {
+            console.log('url',url);
             this.load(url, data, 'GET', function (res) {
                 if (typeof (res) === 'object') return $.msg.auto(res);
                 var index = layer.open({

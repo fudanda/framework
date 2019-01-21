@@ -101,7 +101,10 @@ class Form extends Logic
         }
         // POST请求, 数据自动存库处理
         if ($this->request->isPost()) {
+            
             $data = array_merge($this->request->post(), $this->data);
+
+            
             if (false !== $this->controller->_callback('_form_filter', $data, $this->where)) {
                 $result = Data::save($this->query, $data, $this->pkField, $this->where);
                 if (false !== $this->controller->_callback('_form_result', $result, $data)) {
