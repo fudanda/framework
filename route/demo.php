@@ -30,9 +30,9 @@ Route::post('admin/config/file', function () {
 Route::post('admin/menu/index', function () {
     return json(['code' => 0, 'info' => '测试环境禁排序菜单操作！']);
 });
-Route::post('admin/menu/add', function () {
-    return json(['code' => 0, 'info' => '测试环境禁添加菜单操作！']);
-});
+// Route::post('admin/menu/add', function () {
+//     return json(['code' => 0, 'info' => '测试环境禁添加菜单操作！']);
+// });
 Route::post('admin/menu/edit', function () {
     return json(['code' => 0, 'info' => '测试环境禁编辑菜单操作！']);
 });

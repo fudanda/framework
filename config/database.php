@@ -22,9 +22,9 @@ return [
     // 数据库名
     'database' => 'framework',
     // 用户名
-    'username' => 'framework',
+    'username' => 'root',
     // 密码
-    'password' => 'x5RDsnwX8EcLkXCN',
+    'password' => 'root',
     // 端口
     'hostport' => '3306',
 ];
